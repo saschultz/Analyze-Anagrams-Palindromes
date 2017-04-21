@@ -41,3 +41,10 @@ describe 'String#analyze_characters' do
     expect(input_words.analyze_characters('hello!')).to(eq('hello'))
   end
 end
+
+describe 'String#analyze_characters' do
+  input_words = String.new
+  it('removes any non-alpha characters and downcases all letters') do
+    expect(input_words.analyze_characters('Hello!')).to(eq('hello'))
+  end
+end

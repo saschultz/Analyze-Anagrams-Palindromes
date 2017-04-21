@@ -22,6 +22,7 @@ class String
 
   define_method(:analyze_characters) do |user_input|
     user_input.gsub!(/[^[:alpha:]]/, "")
+    user_input.downcase!
     user_input
   end
 

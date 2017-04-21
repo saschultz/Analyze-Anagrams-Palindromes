@@ -2,7 +2,6 @@ require 'rspec'
 require 'analyze'
 require 'pry'
 
-
 describe 'String#analyze_word?' do
   input_words = String.new
   it('checks if the inputs are words') do
@@ -25,5 +24,13 @@ describe 'String#analyze_palindrome' do
 
   it('if two words are anagrams, it also checks if they are palindromes') do
     expect(input_words.analyze_palindrome('now', 'won')).to(eq('These words are palindromes.'))
+  end
+end
+
+describe 'String#analyze_antigram?' do
+  input_words = String.new
+
+  it('checks if input is an antigram') do
+    expect(input_words.analyze_antigram?('hi', 'bye')).to(eq(true))
   end
 end

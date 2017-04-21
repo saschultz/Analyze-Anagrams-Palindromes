@@ -3,14 +3,14 @@ require 'analyze'
 require 'pry'
 
 
-describe 'analyze#analyze_word?' do
+describe 'String#analyze_word?' do
   input_words = String.new
-  it('checks if the two inputs are words') do
-    expect(input_words.analyze_word?('bY')).to(eq(true))
+  it('checks if the inputs are words') do
+    expect(input_words.analyze_word?('by')).to(eq(true))
   end
 end
 
-describe 'analyze#analyze_anagram' do
+describe 'String#analyze_anagram' do
   input_words = String.new
   it('checks if two words are anagrams') do
     expect(input_words.analyze_anagram('ruby', 'bury')).to(eq('These words are anagrams.'))
@@ -20,7 +20,7 @@ describe 'analyze#analyze_anagram' do
   end
 end
 
-describe 'analyze#analyze_palindrome' do
+describe 'String#analyze_palindrome' do
   input_words = String.new
 
   it('if two words are anagrams, it also checks if they are palindromes') do

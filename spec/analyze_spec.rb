@@ -6,7 +6,7 @@ require 'pry'
 describe 'analyze#analyze_word?' do
   input_words = String.new
   it('checks if the two inputs are words') do
-    expect(input_words.analyze_word?('by')).to(eq(true))
+    expect(input_words.analyze_word?('bY')).to(eq(true))
   end
 end
 

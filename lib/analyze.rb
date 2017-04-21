@@ -1,5 +1,5 @@
 define_method(:analyze_word?) do |user_input|
-  split_input = user_input.split("")
+  split_input = user_input.downcase.split("")
   split_input.include?('a') || split_input.include?('e') || split_input.include?('i') || split_input.include?('o') || split_input.include?('u') || split_input.include?('y')
 end
 

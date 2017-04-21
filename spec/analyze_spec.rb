@@ -27,10 +27,17 @@ describe 'String#analyze_palindrome' do
   end
 end
 
-describe 'String#analyze_antigram?' do
+describe 'String#analyze_antigram' do
   input_words = String.new
 
-  it('checks if input is an antigram') do
-    expect(input_words.analyze_antigram?('hi', 'bye')).to(eq(true))
+  it('checks if two inputs are antigrams') do
+    expect(input_words.analyze_antigram('hi', 'bye')).to(eq('These words are antigrams.'))
+  end
+end
+
+describe 'String#analyze_characters' do
+  input_words = String.new
+  it('removes any non-alpha characters') do
+    expect(input_words.analyze_characters('hello!')).to(eq('hello'))
   end
 end

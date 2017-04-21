@@ -1,7 +1,7 @@
 class String
 
   define_method(:analyze_word?) do |user_input|
-    split_input = user_input.downcase.split("")
+    split_input = user_input.split("")
     split_input.include?('a') || split_input.include?('e') || split_input.include?('i') || split_input.include?('o') || split_input.include?('u') || split_input.include?('y')
   end
 
@@ -15,8 +15,14 @@ class String
       'These words are palindromes.'
   end
 
-  define_method(:analyze_antigram?) do |input1, input2|
+  define_method(:analyze_antigram) do |input1, input2|
     input1 != input2
+      'These words are antigrams.'
+  end
+
+  define_method(:analyze_characters) do |user_input|
+    user_input.gsub!(/[^[:alpha:]]/, "")
+    user_input
   end
 
 end

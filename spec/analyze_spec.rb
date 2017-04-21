@@ -2,6 +2,7 @@ require 'rspec'
 require 'analyze'
 require 'pry'
 
+input_words = String.new
 describe 'String#analyze_word?' do
   input_words = String.new
   it('checks if the inputs are words') do

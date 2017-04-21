@@ -1,8 +1,12 @@
 class String
 
-  define_method(:analyze_word?) do |user_input|
-    split_input = user_input.split("")
-    split_input.include?('a') || split_input.include?('e') || split_input.include?('i') || split_input.include?('o') || split_input.include?('u') || split_input.include?('y')
+  define_method(:analyze_word?) do |input1, input2|
+    split_input1 = input1.split("")
+    split_input2 = input2.split("")
+
+    split_input1.include?('a') || split_input1.include?('e') || split_input1.include?('i') || split_input1.include?('o') || split_input1.include?('u') || split_input1.include?('y')
+
+    split_input2.include?('a') || split_input2.include?('e') || split_input2.include?('i') || split_input2.include?('o') || split_input2.include?('u') || split_input2.include?('y')
   end
 
   define_method(:analyze_anagram) do |input1, input2|

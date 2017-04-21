@@ -6,7 +6,7 @@ input_words = String.new
 describe 'String#analyze_word?' do
   input_words = String.new
   it('checks if the inputs are words') do
-    expect(input_words.analyze_word?('by')).to(eq(true))
+    expect(input_words.analyze_word?('by', 'hi')).to(eq(true))
   end
 end
 

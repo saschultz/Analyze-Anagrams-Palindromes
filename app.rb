@@ -10,14 +10,41 @@ end
 get '/result' do
   input_1 = params.fetch('input_string1')
   input_2 = params.fetch('input_string2')
-
   input_words = String.new
 
-  if(input_words.analyze_word?(input_1, input_2)) && (input_words.analyze_characters(input_1, input_2))
+  if(input_words.analyze_word?(input_1, input_2))
     @final_result = 'You entered words in the english language, well done my friend.'
   else
-    @final_result = 'Are you sure you entered words in the english language?'
+    @final_result = 'Are you sure you entered words in the english language? Try again my friend.'
   end
 
-  erb(:result)
-end
+
+
+
+    erb(:result)
+  end
+
+
+
+    # input_words.analyze_anagram?(input_1, input_2)
+    #   @final_result = 'These words are anagrams.'
+    #
+    #   if input_words.analyze_antigram?(input_1, input_2)
+    #     @final_result = 'These words are antigrams.'
+    #   elsif input_words.analyze_palindrome?(input_1, input_2)
+    #     @final_result = 'These words are palindromes.'
+    #   else
+    #     @final_result = 'cry'
+    #   end
+    # end
+  # end
+
+    # elsif(input_words.analyze_palindrome?(input_1, input_2))
+    #   @final_result = 'These words are palindromes.'
+    # elsif(input_words.analyze_antigram?(input_1, input_2))
+    #   @final_result = 'These words are antigrams.'
+  # else
+  #   @final_result = 'You entered words in the english language, well done my friend.'
+  # end
+  #   end
+  # end

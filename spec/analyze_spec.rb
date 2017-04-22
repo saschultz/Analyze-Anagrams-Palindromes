@@ -11,16 +11,19 @@ describe 'String#analyze_word?' do
   it('checks if the inputs contain vowels') do
     expect(input_words.analyze_word?('ruby', 'bury')).to(eq(true))
   end
+  it('removes symbols and whitespace') do
+    expect(input_words.analyze_word?('hi', 'bye')).to(eq(true))
+  end
 end
 
-describe 'String#analyze_characters' do
-  it('removes symbols and whitespace') do
-    expect(input_words.analyze_characters('hi!', 'b@ye')).to(eq('hibye'))
-  end
-  it('will not accept input until it has downcase all input') do
-    expect(input_words.analyze_characters('HI!', 'b@YE')).to(eq('hibye'))
-  end
-end
+# describe 'String#analyze_characters' do
+#   it('removes symbols and whitespace') do
+#     expect(input_words.analyze_characters('b@ye')).to(eq('bye'))
+#   end
+#   it('will not accept input until it has downcase all input') do
+#     expect(input_words.analyze_characters('HI!')).to(eq('hi'))
+#   end
+# end
 # describe 'String#analyze_characters' do
 #   it('removes symbols and whitespace') do
 #     expect(input_words.analyze_characters('hi!')).to(eq('hi'))

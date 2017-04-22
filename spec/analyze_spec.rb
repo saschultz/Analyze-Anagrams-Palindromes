@@ -5,23 +5,20 @@ require 'pry'
 input_words = String.new
 
 describe 'String#analyze_word?' do
-  # it('checks if the inputs are words') do
-  #   expect(input_words.analyze_word?('hr', 'hl')).to(eq('Please enter words in the english language.'))
-  # end
+  it('checks if the inputs are words') do
+    expect(input_words.analyze_word?('hr', 'hl')).to(eq(false))
+  end
   it('checks if the inputs are words') do
     expect(input_words.analyze_word?('ruby', 'bury')).to(eq(true))
   end
 end
 
 describe 'String#analyze_characters' do
-  it('removes whitespace') do
-    expect(input_words.analyze_characters('hi', 'bye')).to(eq('hibye'))
-  end
-  it('removes symbols') do
+  it('removes symbols and whitespace') do
     expect(input_words.analyze_characters('hi!', 'b@ye')).to(eq('hibye'))
   end
   it('will downcase all input') do
-    expect(input_words.analyze_characters('Hi!', 'b@YE')).to(eq('hibye'))
+    expect(input_words.analyze_characters('HI!', 'b@YE')).to(eq('hibye'))
   end
 end
 

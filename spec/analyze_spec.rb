@@ -35,16 +35,15 @@ describe 'String#analyze_antigram' do
   end
 end
 
-# describe 'String#analyze_characters' do
-#   input_words = String.new
-#   it('removes any non-alpha characters') do
-#     expect(input_words.analyze_characters('hello!', 'goodbye.')).to(eq('hello', 'goodbye'))
-#   end
-#   it('removes any non-alpha characters and downcases all letters') do
-#     expect(input_words.analyze_characters('Hello!', 'Goodbye.')).to(eq('hello', 'goodbye'))
-#   end
-# end
-
-# describe 'String#analyze_characters' do
-#   input_words = String.new
-# end
+describe 'String#analyze_characters' do
+  input_words = String.new
+  it('removes whitespace') do
+    expect(input_words.analyze_characters('hi', 'bye')).to(eq('hibye'))
+  end
+  it('removes symbols') do
+    expect(input_words.analyze_characters('hi!', 'b@ye')).to(eq('hibye'))
+  end
+  it('will downcase all input') do
+    expect(input_words.analyze_characters('Hi!', 'b@YE')).to(eq('hibye'))
+  end
+end

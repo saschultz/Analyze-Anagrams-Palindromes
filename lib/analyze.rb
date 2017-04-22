@@ -5,7 +5,6 @@ class String
 
     if split_input1.include?('a') || split_input1.include?('e') || split_input1.include?('i') || split_input1.include?('o') || split_input1.include?('u') || split_input1.include?('y') &&
     split_input2.include?('a') || split_input2.include?('e') || split_input2.include?('i') || split_input2.include?('o') || split_input2.include?('u') || split_input2.include?('y')
-
     else
       return 'Please enter words in the english language.'
     end
@@ -27,14 +26,10 @@ class String
   end
 
   define_method(:analyze_characters) do |input1, input2|
-    input_characters1 = input1.gsub!(/[^[:alpha:]]/, "")
-    input_characters2 = input2.gsub!(/[^[:alpha:]]/, "")
-
-    input_characters1.downcase!
-    input_characters2.downcase!
-
-    input_characters1
-    input_characters2
+    join_input = input1.concat(input2)
+    join_input.gsub!(/[^[:alpha:]]/, "")
+    join_input.downcase!
+    join_input
   end
 
 end

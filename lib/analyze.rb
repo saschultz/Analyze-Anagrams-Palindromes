@@ -1,13 +1,16 @@
 class String
   define_method(:analyze_word?) do |input1, input2|
-    split_input1 = input1.split("")
-    split_input2 = input2.split("")
-
-    if split_input1.include?('a') || split_input1.include?('e') || split_input1.include?('i') || split_input1.include?('o') || split_input1.include?('u') || split_input1.include?('y') &&
-    split_input2.include?('a') || split_input2.include?('e') || split_input2.include?('i') || split_input2.include?('o') || split_input2.include?('u') || split_input2.include?('y')
+    # split_input1 = input1.split("")
+    # split_input2 = input2.split("")
+    #
+    # if split_input1.include?('a') || split_input1.include?('e') || split_input1.include?('i') || split_input1.include?('o') || split_input1.include?('u') || split_input1.include?('y') &&
+    # split_input2.include?('a') || split_input2.include?('e') || split_input2.include?('i') || split_input2.include?('o') || split_input2.include?('u') || split_input2.include?('y')
+    #   true
+    if input1.length !=0 && input1.match((/[AEIOUY]+/i)) &&
+      input2.length !=0 && input2.match((/[AEIOUY]+/i))
       true
     else
-      return false
+      false
     end
   end
 

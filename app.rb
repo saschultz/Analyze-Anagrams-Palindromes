@@ -9,16 +9,21 @@ end
 
 get '/result' do
   ## First approach: chaining methods. Does not work because only the last method called with run
-  @final_result = params.fetch('input_string1', 'input_string2').analyze_anagram('input_string1', 'input_string2')
-  erb(:result)
-end
+#   @final_result = params.fetch('input_string1', 'input_string2').analyze_anagram('input_string1', 'input_string2')
+#   erb(:result)
+# end
 
   ### The below approach is not finished, but is something to explore and get into a working state
-#   input_1 = params.fetch('input_string1')
-#   input_2 = params.fetch('input_string2')
-#   input_words = String.new
-#   if(input_words.analyze_word(input_1, input_2)) == 'Please enter words in the english language.'
-#     @final_result = "Please enter words in the english language."
+  input_1 = params.fetch('input_string1')
+  input_2 = params.fetch('input_string2')
+
+  input_words = String.new
+  if(input_words.analyze_word(input_1, input_2))
+    @final_result = 'Thanks for entering words in the english language.'
+  # elsif(input_words.analyze_word(input_1, input_2)).==('Please enter words in the english language.')
+  #   @final_result = 'Please enter words in the english language.'
+  # else
+  #   'fail'
 #
 #   elsif(input_words.analyze_anagram(input_1, input_2)) == 'These words are palindromes.'
 #     @final_result = "These words are anagrams."
@@ -31,7 +36,7 @@ end
 #
 #   else
 #     "fail"
-#   end
-#
-#   erb(:result)
-# end
+  end
+
+  erb(:result)
+end

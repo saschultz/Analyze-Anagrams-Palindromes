@@ -6,7 +6,7 @@ input_words = String.new
 describe 'String#analyze_word?' do
   input_words = String.new
   it('checks if the inputs are words') do
-    expect(input_words.analyze_word?('by', 'hi')).to(eq(true))
+    expect(input_words.analyze_word?('hr', 'hl')).to(eq('Please enter words in the english language.'))
   end
 end
 
@@ -30,22 +30,21 @@ end
 
 describe 'String#analyze_antigram' do
   input_words = String.new
-
   it('checks if two inputs are antigrams') do
     expect(input_words.analyze_antigram('hi', 'bye')).to(eq('These words are antigrams.'))
   end
 end
 
-describe 'String#analyze_characters' do
-  input_words = String.new
-  it('removes any non-alpha characters') do
-    expect(input_words.analyze_characters('hello!')).to(eq('hello'))
-  end
-end
+# describe 'String#analyze_characters' do
+#   input_words = String.new
+#   it('removes any non-alpha characters') do
+#     expect(input_words.analyze_characters('hello!', 'goodbye.')).to(eq('hello', 'goodbye'))
+#   end
+#   it('removes any non-alpha characters and downcases all letters') do
+#     expect(input_words.analyze_characters('Hello!', 'Goodbye.')).to(eq('hello', 'goodbye'))
+#   end
+# end
 
-describe 'String#analyze_characters' do
-  input_words = String.new
-  it('removes any non-alpha characters and downcases all letters') do
-    expect(input_words.analyze_characters('Hello!')).to(eq('hello'))
-  end
-end
+# describe 'String#analyze_characters' do
+#   input_words = String.new
+# end

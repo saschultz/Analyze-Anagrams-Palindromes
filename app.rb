@@ -13,7 +13,9 @@ get '/result' do
   input_2 = params.fetch('input_string2')
 
   input_words = String.new
-  if(input_words.analyze_word?(input_1, input_2)) == false
+  if(input_words.analyze_word?(input_1, input_2))
+    @final_result = 'You entered words in the english language, well done my friend.'
+  else
     @final_result = 'Are you sure you entered words in the english language?'
   end
 

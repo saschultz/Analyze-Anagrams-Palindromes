@@ -10,22 +10,22 @@ class String
     end
   end
 
-  ##analyzes if input contains any non alpha characters (symbols, spaces)
+  #analyzes if input contains any non alpha characters (symbols, spaces)
   define_method(:analyze_characters) do |input1, input2|
     input1 = input1.downcase.gsub!(/\d+|\W+/, "")
     input2 = input2.downcase.gsub!(/\d+|\W+/, "")
     join_input = input1.concat(input2)
   end
 
-  define_method(:analyze_anagram) do |input1, input2|
+  define_method(:analyze_anagram?) do |input1, input2|
     input1.downcase.chars.sort == input2.downcase.chars.sort
   end
 
-  define_method(:analyze_antigram) do |input1, input2|
+  define_method(:analyze_antigram?) do |input1, input2|
     input1 != input2
   end
 
-  define_method(:analyze_palindrome) do |input1, input2|
+  define_method(:analyze_palindrome?) do |input1, input2|
     input1.reverse == input2
   end
 

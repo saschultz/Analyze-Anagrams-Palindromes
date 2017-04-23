@@ -28,7 +28,7 @@ As the first independent project at Epicodus as a Ruby student, this project was
 
 ## Known Bugs
 
-While all defined methods in analyze.rb are working and passing through rspec, not all methods are being called. Therefore, the site is not functioning to it's expected state. The code needs to be developed further in app.rb so that all defined methods are called on the user input. Approaches that I will continue to develop will include branching logic in app.rb or develping a master method that contains all defined methods in analyze.rb. In it's current state, integration specs will pass -but only for analyzing anagrams. There are comments in app.rb with incomplete code to be developed further.
+The only aspect that I would like to revisit would be in the event for when the user enters words that are palindromes. Ex: 'now' and 'won'. In the applications current state, it will return the last true statement: 'These words are palindromes.' However, I would like it to be able to say both 'These words are anagrams.' and 'These words are palindromes.'
 
 ## Support and contact details
 

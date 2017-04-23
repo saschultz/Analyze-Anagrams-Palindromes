@@ -13,7 +13,6 @@ get '/result' do
   input_words = String.new
 
   if(input_words.analyze_word?(input_1, input_2))
-    # @final_result = 'You entered words in the english language, well done my friend.'
     if input_words.analyze_anagram?(input_1, input_2)
       @final_result = 'These words are anagrams.'
       if input_words.analyze_palindrome?(input_1, input_2)
@@ -24,8 +23,6 @@ get '/result' do
     else
       @final_result = 'Are you sure you entered words in the english language? Try again my friend.'
     end
-  else
-    @final_result = 'Are you sure you entered words in the english language? Try again my friend.'
   end
     erb(:result)
   end

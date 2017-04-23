@@ -16,23 +16,6 @@ describe 'String#analyze_word?' do
   end
 end
 
-# describe 'String#analyze_characters' do
-#   it('removes symbols and whitespace') do
-#     expect(input_words.analyze_characters('b@ye')).to(eq('bye'))
-#   end
-#   it('will not accept input until it has downcase all input') do
-#     expect(input_words.analyze_characters('HI!')).to(eq('hi'))
-#   end
-# end
-# describe 'String#analyze_characters' do
-#   it('removes symbols and whitespace') do
-#     expect(input_words.analyze_characters('hi!')).to(eq('hi'))
-#   end
-#   it('will not accept input until it has downcase all input') do
-#     expect(input_words.analyze_characters('HI!')).to(eq('hi'))
-#   end
-# end
-
 describe 'String#analyze_anagram?' do
   it('checks if two words are anagrams') do
     expect(input_words.analyze_anagram?('ruby', 'bury')).to(eq(true))
